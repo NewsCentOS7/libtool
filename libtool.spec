@@ -1,14 +1,14 @@
-%global gcc_version 4.8.5
+%global gcc_version 8.3.1
 
 Summary: The GNU Portable Library Tool
 Name:    libtool
 Version: 2.4.2
 Release: 22%{?dist}
 License: GPLv2+ and LGPLv2+ and GFDL
-URL:     http://www.gnu.org/software/libtool/
+URL:     https://www.gnu.org/software/libtool/
 Group:   Development/Tools
 
-Source:  http://ftp.gnu.org/gnu/libtool/libtool-%{version}.tar.xz
+Source:  https://ftp.gnu.org/gnu/libtool/libtool-%{version}.tar.xz
 Patch0:  libtool-2.2.10-rpath.patch
 Patch1:  libtool-2.4.2-TEMPORARY-disable-gcj-tests.patch
 # Run the 'tar --no-same-owner -xf' instead of 'tar -xf'
@@ -85,11 +85,11 @@ Static libraries and header files for development with ltdl.
 
 %prep
 %setup -n libtool-%{version} -q
-%patch0 -p1 -b .rpath
-%patch1 -p1 -b .temp-disable-gcj-test
-%patch2 -p1 -b .tar-no-same-owner
-%patch3 -p1 -b .ENOMEM-1
-%patch4 -p1 -b .ENOMEM-2
+%patch -P 0 -p1 -b .rpath
+%patch -P 1 -p1 -b .temp-disable-gcj-test
+%patch -P 2 -p1 -b .tar-no-same-owner
+%patch -P 3 -p1 -b .ENOMEM-1
+%patch -P 4 -p1 -b .ENOMEM-2
 
 %build
 
