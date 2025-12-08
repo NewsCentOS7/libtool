@@ -1,7 +1,7 @@
 Summary: The GNU Portable Library Tool
 Name:    libtool
 Version: 2.4.2
-Release: 22%{?dist}
+Release: 23%{?dist}
 License: GPLv2+ and LGPLv2+ and GFDL
 URL:     https://www.gnu.org/software/libtool/
 Group:   Development/Tools
