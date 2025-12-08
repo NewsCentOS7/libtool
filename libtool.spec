@@ -1,5 +1,3 @@
-%global gcc_version 8.3.1
-
 Summary: The GNU Portable Library Tool
 Name:    libtool
 Version: 2.4.2
@@ -40,7 +38,7 @@ BuildRequires: gcc-java
 
 # /usr/bin/libtool includes paths within gcc's versioned directories
 # Libtool must be rebuilt whenever a new upstream gcc is built
-Requires: gcc = %{gcc_version}
+Requires: gcc
 
 %description
 GNU Libtool is a set of shell scripts which automatically configure UNIX and
